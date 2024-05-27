@@ -1,9 +1,10 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+// component imports
 import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Page not found">
+<MainLayout title="Page Not Found">
   <div
     class="container"
     style={{
@@ -14,19 +15,17 @@ import Link from "../components/Link.astro";
     }}
   >
     <div>
-      <h1 class="h1">Welp,this is awkward!</h1>
-      <p>Something went tottaly wrong here</p>
+      <h1 class="h1">Welp, this is awkward!</h1>
+      <p>We seem to have misplaced something…</p>
     </div>
     <Link
       href="/"
       style="secondary"
       text="Go Home"
       icon={{
-        name: "home",
+        name: "tabler:home",
         side: "right",
       }}
     />
-
-    <!-- 7:09 -->
   </div>
 </MainLayout>
