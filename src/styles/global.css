@@ -359,6 +359,12 @@ button {
   display: grid;
   place-items: center;
   padding: var(--space-2xs);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: hsl(var(--accent));
+    border-radius: 6px;
+  }
 }
 
 [aria-label="Blog pages"] {
