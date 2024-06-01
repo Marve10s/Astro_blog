@@ -1,5 +1,6 @@
 ---
-import type { GetStaticPaths } from "astro";
+import type { Page } from "../../../types"; // Adjust the path as needed
+
 // component imports
 import MainLayout from "../../layouts/MainLayout.astro";
 import PostCard from "../../components/PostCard.astro";
@@ -17,7 +18,7 @@ export async function getStaticPaths({ paginate }) {
   });
 }
 
-const { page } = Astro.props;
+const { page } = Astro.props as { page: Page }; // Cast Astro.props to the Page type
 ---
 
 <MainLayout title="My Blog">
@@ -36,7 +37,7 @@ const { page } = Astro.props;
     </div>
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
-  <aside class="container" aria-label="Blog Categorues">
+  <aside class="container" aria-label="Blog Categories">
     <h2 class="h3">Blog Categories</h2>
     <CategoryCloud showCount={true} />
   </aside>
