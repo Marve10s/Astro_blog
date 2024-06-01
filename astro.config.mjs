@@ -4,5 +4,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [icon(), sitemap()]
+  site: "",
+  integrations: [icon(), sitemap()],
 });
